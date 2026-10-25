@@ -1,0 +1,245 @@
+<!doctype html>
+<!-- TODO: APP_STORE_URL — thay href "#appstore" bằng link App Store khi app lên store -->
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SayBeer — Khóa app nhắn tin khi nhậu</title>
+<meta name="description" content="SayBeer khóa app nhắn tin trước khi bạn quá chén và mở lại đúng giờ hẹn. Hãy say bia — xin đừng “say” bậy. Không mạng, không tài khoản, không đọc tin nhắn.">
+<link rel="canonical" href="https://saybeer.1labs.space/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#120d07">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SayBeer">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:title" content="SayBeer — Khóa app nhắn tin khi nhậu">
+<meta property="og:description" content="Hãy say bia. Xin đừng “say” bậy. Khóa app nhắn tin bằng Screen Time, mở lại đúng giờ hẹn.">
+<meta property="og:url" content="https://saybeer.1labs.space/">
+<meta property="og:image" content="https://saybeer.1labs.space/img/og-share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SayBeer — Hãy say bia. Xin đừng “say” bậy.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SayBeer — Khóa app nhắn tin khi nhậu">
+<meta name="twitter:description" content="Hãy say bia. Xin đừng “say” bậy. Khóa app nhắn tin bằng Screen Time, mở lại đúng giờ hẹn.">
+<meta name="twitter:image" content="https://saybeer.1labs.space/img/og-share.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MobileApplication",
+      "name": "SayBeer",
+      "operatingSystem": "iOS 17.0 trở lên",
+      "applicationCategory": "LifestyleApplication",
+      "description": "SayBeer khóa app nhắn tin trước khi bạn quá chén và mở lại đúng giờ hẹn. Không mạng, không tài khoản, không đọc tin nhắn.",
+      "url": "https://saybeer.1labs.space/",
+      "image": "https://saybeer.1labs.space/img/og-share.png",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "VND" },
+      "inLanguage": "vi"
+    },
+    {
+      "@type": "WebSite",
+      "name": "SayBeer",
+      "url": "https://saybeer.1labs.space/",
+      "inLanguage": "vi"
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg0:#120d07; --bg1:#241507; --card:#ffffff10; --line:#ffffff1c;
+  --amber:#f5a623; --amber-soft:#f5a62326; --text:#f3ede4; --muted:#b9ac99;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Be Vietnam Pro",system-ui,-apple-system,sans-serif;
+  background:linear-gradient(180deg,var(--bg0),var(--bg1) 60%,var(--bg0));
+  color:var(--text);line-height:1.6;overflow-x:hidden;
+}
+a{color:var(--amber);text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--text)}
+.logo svg{width:28px;height:28px}
+nav .links{display:flex;gap:22px;font-size:15px}
+nav .links a{color:var(--muted)}
+nav .links a:hover{color:var(--amber)}
+.btn{
+  display:inline-block;background:var(--amber);color:#1a1206;font-weight:800;
+  padding:14px 26px;border-radius:14px;transition:transform .15s ease, box-shadow .15s ease;
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px #f5a62340}
+.btn.small{padding:9px 16px;border-radius:10px;font-size:14px}
+.hero{display:flex;align-items:center;gap:40px;padding:60px 0 40px;flex-wrap:wrap}
+.hero .copy{flex:1 1 380px}
+.hero h1{font-size:clamp(34px,5.5vw,56px);font-weight:800;line-height:1.15}
+.hero h1 em{color:var(--amber);font-style:normal}
+.hero p.sub{margin:18px 0 28px;font-size:18px;color:var(--muted);max-width:30em}
+.hero .phone{flex:0 1 300px;margin:0 auto}
+.note{font-size:13px;color:var(--muted);margin-top:10px}
+.phone{position:relative;width:min(290px,78vw)}
+.phone img{
+  width:100%;height:auto;display:block;border-radius:34px;border:6px solid #3a2c17;
+  box-shadow:0 24px 70px #00000080;
+}
+section{padding:64px 0}
+h2{font-size:clamp(26px,3.6vw,36px);font-weight:800;margin-bottom:10px}
+.lead{color:var(--muted);max-width:40em;margin-bottom:34px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px;
+}
+.card h3{font-size:18px;margin:12px 0 6px}
+.card p{color:var(--muted);font-size:15px}
+.card .ic{
+  width:44px;height:44px;border-radius:12px;background:var(--amber-soft);
+  display:flex;align-items:center;justify-content:center;
+}
+.card .ic svg{width:22px;height:22px;stroke:var(--amber)}
+.pain .card{border-style:dashed}
+.pain .card h3{color:#e8826b}
+.shots{display:flex;gap:18px;overflow-x:auto;padding:10px 4px 26px;scroll-snap-type:x mandatory}
+.shots figure{flex:0 0 230px;scroll-snap-align:center}
+.shots img{width:100%;height:auto;border-radius:26px;border:4px solid #3a2c17;display:block}
+.shots figcaption{font-size:13px;color:var(--muted);text-align:center;margin-top:10px}
+.privacy-band{
+  background:var(--card);border:1px solid var(--line);border-radius:22px;
+  padding:36px;display:flex;gap:26px;align-items:center;flex-wrap:wrap;
+}
+.privacy-band .big{font-size:clamp(20px,3vw,26px);font-weight:800;flex:1 1 300px}
+.cta{text-align:center}
+.cta h2{margin-bottom:16px}
+footer{border-top:1px solid var(--line);padding:30px 0 44px;color:var(--muted);font-size:14px}
+footer .row{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+.reveal.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.btn{transition:none}}
+@media (max-width:640px){
+  nav .links{display:none}
+  .hero{padding-top:28px}
+  section{padding:46px 0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<nav>
+  <a class="logo" href="#">
+    <svg viewBox="0 0 24 24" fill="#f5a623"><path d="M5 4h11a1 1 0 0 1 1 1v1h1.5A2.5 2.5 0 0 1 21 8.5v4a2.5 2.5 0 0 1-2.5 2.5H17v3a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4zm12 5v4h1.5a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5H17z"/></svg>
+    SayBeer
+  </a>
+  <div class="links">
+    <a href="#tinhnang">Tính năng</a>
+    <a href="#anh">Ảnh màn hình</a>
+    <a href="privacy.html">Riêng tư</a>
+    <a href="#hotro">Hỗ trợ</a>
+  </div>
+  <a class="btn small" href="#appstore">App Store</a>
+</nav>
+
+<header class="hero">
+  <div class="copy">
+    <h1>Hãy say bia.<br>Xin đừng <em>“say” bậy.</em></h1>
+    <p class="sub">SayBeer khóa app nhắn tin trước khi bạn quá chén — và mở lại đúng giờ hẹn. Khóa thật bằng Screen Time của Apple, không phải "tự giác".</p>
+    <a class="btn" href="#appstore">Sắp có trên App Store</a>
+    <p class="note">iOS 17+ · Miễn phí · Không cần tài khoản</p>
+  </div>
+  <div class="phone reveal on"><img src="img/shot-06.png" alt="Màn hình chính SayBeer" width="294" height="640"></div>
+</header>
+
+<section class="pain reveal">
+  <h2>Quen không?</h2>
+  <p class="lead">22h bạn là người lịch sự. 1h sáng, chính chiếc điện thoại đó phản bội bạn.</p>
+  <div class="cards">
+    <div class="card"><h3>“Em ngủ chưa…”</h3><p>Tỏ tình lúc 1 giờ sáng với người không nên tỏ tình. Sáng dậy đọc lại muốn độn thổ.</p></div>
+    <div class="card"><h3>Nhắn nhóm công ty</h3><p>Nói thật lòng về sếp… vào nhầm nhóm có sếp. Thứ hai họp mà không dám nhìn ai.</p></div>
+    <div class="card"><h3>Xin lỗi cả danh bạ</h3><p>Sáng hôm sau nhắn từng người: “tối qua mình say, bỏ qua nha”. Mỗi tuần một lần.</p></div>
+  </div>
+</section>
+
+<section id="tinhnang" class="reveal">
+  <h2>SayBeer khóa giùm bạn</h2>
+  <p class="lead">Bật một nút trước khi đi nhậu. Mọi thứ còn lại app lo — kể cả những tình huống thật của người đi nhậu.</p>
+  <div class="cards">
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+      <h3>Khóa app theo phiên</h3><p>Chọn Zalo, Messenger, Messages… hẹn giờ mở (mặc định 6h sáng). Tới giờ tự gỡ, không cần mở app.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M9 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></svg></div>
+      <h3>Cửa sổ nhắn việc 15 phút</h3><p>Vẫn phải trực việc? Mở tạm 15 phút, tối đa 3 lần — gõ đúng câu cam kết “chỉ nhắn việc, không tâm sự” rồi mới được mở.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 4a6 6 0 0 1 6 6c0 2.5-1.5 4-3 5.5V18a3 3 0 0 1-6 0v-2.5C7.5 14 6 12.5 6 10a6 6 0 0 1 6-6z"/></svg></div>
+      <h3>Kiểm tra tỉnh táo</h3><p>Muốn mở sớm? Gõ chính xác một câu líu lưỡi tiếng Việt + tính nhẩm trong 90 giây. Say thì chịu, đi ngủ đi.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+      <h3>Khẩn cấp: giữ 5 giây</h3><p>Chuyện gấp thật sự không chờ ai. Giữ nút khẩn cấp 5 giây — mở toàn bộ ngay, không câu hỏi.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg></div>
+      <h3>Hẹn lịch tự khóa</h3><p>Tối thứ 6, thứ 7 hay “có độ”? Đặt lịch một lần — tới giờ máy tự khóa, kể cả khi bạn quên mở app.</p>
+    </div>
+    <div class="card">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-8M21 20H3"/></svg></div>
+      <h3>Thống kê chuỗi an toàn</h3><p>Bao nhiêu phiên an toàn, bao nhiêu giờ đã khóa, chuỗi bao nhiêu trận không “tai nạn” — nhìn là muốn giữ chuỗi.</p>
+    </div>
+  </div>
+</section>
+
+<section id="anh" class="reveal">
+  <h2>Nhìn thử</h2>
+  <p class="lead">Ảnh thật từ app, không dàn dựng.</p>
+  <div class="shots">
+    <figure><img src="img/shot-09.png" alt="Màn countdown đang khóa" width="294" height="640" loading="lazy" decoding="async"><figcaption>Đang khóa — đếm ngược tới giờ mở</figcaption></figure>
+    <figure><img src="img/shot-11.png" alt="Màn chặn khi mở app bị khóa" width="294" height="640" loading="lazy" decoding="async"><figcaption>Mở app bị khóa? “Để mai nhắn.”</figcaption></figure>
+    <figure><img src="img/shot-10.png" alt="Cửa sổ nhắn việc" width="294" height="640" loading="lazy" decoding="async"><figcaption>Cam kết rồi mới được nhắn việc</figcaption></figure>
+    <figure><img src="img/shot-12.png" alt="Bài kiểm tra tỉnh táo" width="294" height="640" loading="lazy" decoding="async"><figcaption>Kiểm tra tỉnh táo — gõ đúng mới mở</figcaption></figure>
+    <figure><img src="img/shot-06.png" alt="Màn hình chính" width="294" height="640" loading="lazy" decoding="async"><figcaption>Một nút trước khi đi nhậu</figcaption></figure>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="privacy-band">
+    <div class="big">Không mạng. Không tài khoản.<br>Không đọc tin nhắn của bạn.</div>
+    <div style="flex:1 1 300px;color:var(--muted)">
+      SayBeer dùng Screen Time của Apple để khóa app bạn tự chọn, trên máy của bạn. Mọi dữ liệu (danh sách app, lịch sử phiên) nằm nguyên trên iPhone — app không có lấy một dòng code gọi mạng. <a href="privacy.html">Đọc chính sách quyền riêng tư →</a>
+    </div>
+  </div>
+</section>
+
+<section id="appstore" class="cta reveal">
+  <h2>Trận sau, để SayBeer giữ danh dự cho bạn 🍺</h2>
+  <p class="lead" style="margin:0 auto 26px">Đang hoàn tất thủ tục lên App Store. Ghé lại sớm nhé.</p>
+  <a class="btn" href="#">Sắp có trên App Store</a>
+</section>
+
+<footer id="hotro">
+  <div class="row">
+    <div>© 2026 SayBeer · saybeer.1labs.space</div>
+    <div>
+      Hỗ trợ: <!--email_off--><a href="mailto:feedback@1labs.space">feedback@1labs.space</a><!--/email_off-->
+      · <a href="privacy.html">Quyền riêng tư</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+<script>
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add("on"); io.unobserve(e.target); }
+}), { threshold: 0.12 });
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+</script>
+</body>
+</html>

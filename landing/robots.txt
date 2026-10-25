@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://saybeer.1labs.space/sitemap.xml
