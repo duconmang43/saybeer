@@ -5,6 +5,7 @@
 - Bổ sung bản Android 1.1.1 / code 4 vào `android/`, package `com.tem2t.saybeer`.
 - Giữ nguyên source iOS và cấu trúc thư mục hiện có ở root.
 - Thêm README ở root và workflow `.github/workflows/android.yml` chạy từ `android/`.
+- CI chỉ định Ubuntu 24.04 và các gói SDK cần thiết; không dùng mặc định cài gói `tools` cũ đã bị Google gỡ khỏi repository SDK.
 - Không đưa nested Git repository, khóa ký, mật khẩu, cấu hình máy, email tester hoặc APK/AAB phát hành vào Git.
 - Source ứng dụng giữ nguyên bản nội bộ; các đề xuất trong PRODUCT-REVIEW-2026-10-28.md chưa được triển khai trong PR này.
 
